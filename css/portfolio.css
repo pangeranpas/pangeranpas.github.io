@@ -1,0 +1,535 @@
+/* =====================================================
+   PORTFOLIO CSS — Pangeran Christian Pasaribu
+   Modern Dark Theme · Navy + Electric Blue + Cyan
+   ===================================================== */
+
+:root {
+  --navy-950: #020817;
+  --navy-900: #0a0f1e;
+  --navy-800: #0d1529;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --glass-bg: rgba(13, 21, 41, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --text-gradient-start: #60a5fa;
+  --text-gradient-end: #22d3ee;
+}
+
+/* ===================== BASE ===================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--navy-950);
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===================== SELECTION ===================== */
+::selection {
+  background: rgba(37, 99, 235, 0.35);
+  color: #e2e8f0;
+}
+
+/* ===================== SCROLLBAR ===================== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy-950); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(135deg, #3b82f6, #22d3ee); }
+
+/* ===================== NAVBAR ===================== */
+#navbar {
+  background: transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(10, 15, 30, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link.active {
+  color: #60a5fa;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #06b6d4;
+}
+
+/* ===================== GLASS CARD ===================== */
+.glass-card {
+  background: rgba(13, 21, 41, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 40px rgba(37, 99, 235, 0.08);
+}
+
+/* ===================== HERO GRID BACKGROUND ===================== */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ===================== GRADIENT TEXT ===================== */
+.text-gradient-animated {
+  background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===================== HERO ANIMATIONS ===================== */
+.hero-animate {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== SCROLL REVEAL ===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal:nth-child(5) { transition-delay: 0.4s; }
+
+/* ===================== SECTION HEADERS ===================== */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #22d3ee;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+
+/* ===================== TECH BADGE ===================== */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  font-family: 'JetBrains Mono', monospace;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: #93c5fd;
+}
+
+/* ===================== EXPERIENCE TAGS ===================== */
+.exp-tag {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  font-size: 0.7rem;
+  color: #93c5fd;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ===================== PROJECT TAGS ===================== */
+.proj-tag {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  font-size: 0.7rem;
+  color: #67e8f9;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ===================== EDU TAGS ===================== */
+.edu-tag {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* ===================== SKILL BARS ===================== */
+.skill-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.2s ease-out;
+}
+
+.skill-card.visible .skill-fill {
+  /* Width set via inline style, triggered by JS */
+}
+
+/* ===================== SKILL CARD ===================== */
+.skill-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===================== PROJECT CARD ===================== */
+.project-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.12);
+}
+
+/* ===================== ODOO VERSION GRID ===================== */
+.odoo-version-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.version-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 80px;
+  border-radius: 14px;
+  border: 1px solid;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.version-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  z-index: 10;
+}
+
+.version-num {
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1;
+}
+
+.version-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.version-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: rgba(10, 15, 30, 0.95);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #cbd5e1;
+  font-size: 0.65rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.version-card:hover .version-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Version color themes */
+.version-legacy {
+  background: rgba(75, 85, 99, 0.2);
+  border-color: rgba(75, 85, 99, 0.4);
+  color: #9ca3af;
+  height: 72px;
+}
+
+.version-stable {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: #93c5fd;
+  height: 76px;
+}
+
+.version-primary {
+  background: rgba(37, 99, 235, 0.25);
+  border-color: rgba(37, 99, 235, 0.5);
+  color: #60a5fa;
+  height: 84px;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+}
+
+.version-current {
+  background: rgba(6, 182, 212, 0.2);
+  border-color: rgba(6, 182, 212, 0.4);
+  color: #22d3ee;
+  height: 90px;
+  box-shadow: 0 4px 25px rgba(6, 182, 212, 0.2);
+}
+
+.version-latest {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(37, 99, 235, 0.25));
+  border-color: rgba(6, 182, 212, 0.6);
+  color: #67e8f9;
+  height: 96px;
+  box-shadow: 0 6px 30px rgba(6, 182, 212, 0.3);
+  position: relative;
+}
+
+.version-latest::before {
+  content: '★';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ===================== ODOO EXPERTISE CARD ===================== */
+.odoo-expertise-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.odoo-expertise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.1);
+}
+
+/* ===================== CERT CARD ===================== */
+.cert-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(37, 99, 235, 0.25) !important;
+}
+
+/* ===================== TIMELINE DOTS ===================== */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  border: 3px solid var(--navy-900);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3), 0 0 20px rgba(37, 99, 235, 0.4);
+  flex-shrink: 0;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3), 0 0 15px rgba(37, 99, 235, 0.3); }
+  50%       { box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.15), 0 0 25px rgba(37, 99, 235, 0.5); }
+}
+
+/* ===================== ACHIEVEMENT CARDS ===================== */
+.achievement-card {
+  background: rgba(13, 21, 41, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.25);
+}
+
+/* ===================== CONTACT LINK ===================== */
+.contact-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ===================== BACK TO TOP ===================== */
+#back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== FLOAT ANIMATION ===================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ===================== CUSTOM PULSE SLOW ===================== */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* ===================== MOBILE NAV ===================== */
+#mobile-menu {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ===================== RESPONSIVE TWEAKS ===================== */
+@media (max-width: 640px) {
+  .odoo-version-grid {
+    gap: 8px;
+  }
+  .version-card {
+    width: 58px;
+    font-size: 0.9rem;
+  }
+  .version-num {
+    font-size: 1.1rem;
+  }
+  .version-label {
+    font-size: 0.55rem;
+  }
+  .version-legacy  { height: 60px; }
+  .version-stable  { height: 65px; }
+  .version-primary { height: 72px; }
+  .version-current { height: 78px; }
+  .version-latest  { height: 86px; }
+}
+
+@media (max-width: 768px) {
+  .timeline-item > div:first-child {
+    text-align: left !important;
+  }
+  .timeline-item .flex.lg\:flex-row-reverse {
+    flex-direction: row !important;
+  }
+  .timeline-item ul li.lg\:flex-row-reverse {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+}
+
+/* ===================== FOCUS STYLES (accessibility) ===================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===================== PRINT ===================== */
+@media print {
+  #navbar, #back-to-top, .hero-grid { display: none !important; }
+  body { background: white !important; color: black !important; }
+  section { page-break-inside: avoid; }
+}

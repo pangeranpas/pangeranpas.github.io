@@ -1,296 +1,1383 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Welcome to my Profile - Pangeran Christian</title>
-<!--
-Stacked Template
-http://www.templatemo.com/tm-505-stacked
--->
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangeran Christian Pardamean Pasaribu — Odoo ERP Developer & Software Engineer</title>
+  <meta name="description" content="Experienced Odoo ERP Developer & Software Engineer with 7+ years specializing in Python, ERP customization, enterprise application development, PostgreSQL, and business process automation." />
+  <meta name="keywords" content="Odoo Developer, ERP Developer, Python Developer, Software Engineer, Bekasi, Indonesia, Odoo Customization" />
+  <meta name="author" content="Pangeran Christian Pardamean Pasaribu" />
+  <meta property="og:title" content="Pangeran Pasaribu — Odoo ERP Developer & Software Engineer" />
+  <meta property="og:description" content="7+ years experience in Odoo ERP, Python, enterprise software development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pangeranpas.github.io" />
+  <link rel="canonical" href="https://pangeranpas.github.io" />
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <nav class="nav">
-          <div class="burger">
-            <div class="burger__patty"></div>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            navy: {
+              950: '#020817',
+              900: '#0a0f1e',
+              800: '#0d1529',
+              700: '#111d35',
+              600: '#162040',
+            },
+            electric: {
+              blue: '#2563eb',
+              cyan: '#06b6d4',
+              light: '#38bdf8',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.6s ease-out forwards',
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-left': 'slideLeft 0.6s ease-out forwards',
+            'slide-right': 'slideRight 0.6s ease-out forwards',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'spin-slow': 'spin 8s linear infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            slideRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(37, 99, 235, 0.3)' },
+              '100%': { boxShadow: '0 0 40px rgba(6, 182, 212, 0.6)' },
+            },
+          },
+          backgroundImage: {
+            'hero-gradient': 'linear-gradient(135deg, #020817 0%, #0a0f1e 40%, #0d1529 70%, #0a1628 100%)',
+            'card-gradient': 'linear-gradient(135deg, rgba(13,21,41,0.9) 0%, rgba(10,15,30,0.95) 100%)',
+            'blue-gradient': 'linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)',
+            'text-gradient': 'linear-gradient(135deg, #60a5fa 0%, #06b6d4 50%, #818cf8 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body class="bg-navy-950 text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group" aria-label="Home">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-sm font-mono shadow-lg group-hover:scale-110 transition-transform duration-200">
+            PCP
+          </div>
+          <span class="font-semibold text-sm text-gray-300 hidden sm:block group-hover:text-white transition-colors">Pangeran Pasaribu</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#about" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">About</a>
+          <a href="#experience" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Experience</a>
+          <a href="#projects" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Projects</a>
+          <a href="#skills" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Skills</a>
+          <a href="#odoo" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Odoo</a>
+          <a href="#education" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Education</a>
+          <a href="#contact" class="nav-link px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200">Contact</a>
+        </div>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="assets/cv-pangeran-pasaribu.pdf" download class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm font-medium hover:from-blue-500 hover:to-cyan-400 transition-all duration-200 shadow-lg hover:shadow-blue-500/25 hover:scale-105">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Download CV</span>
+          </a>
+          <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-200" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i data-lucide="menu" class="w-5 h-5" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-navy-900/95 backdrop-blur-xl" role="menu">
+      <div class="px-4 py-4 space-y-1">
+        <a href="#about" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">About</a>
+        <a href="#experience" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Experience</a>
+        <a href="#projects" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Projects</a>
+        <a href="#skills" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Skills</a>
+        <a href="#odoo" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Odoo</a>
+        <a href="#education" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Education</a>
+        <a href="#contact" class="mobile-nav-link block px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Contact</a>
+        <div class="pt-2 border-t border-white/5">
+          <a href="assets/cv-pangeran-pasaribu.pdf" download class="flex items-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm font-medium">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <!-- Background elements -->
+    <div class="absolute inset-0 bg-hero-gradient"></div>
+    <div class="hero-grid absolute inset-0 opacity-20"></div>
+
+    <!-- Animated orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1.5s;"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left content -->
+        <div class="text-center lg:text-left">
+          <!-- Status badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 hero-animate" style="--delay: 0s">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            Available for opportunities
           </div>
 
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#1" class="nav__link c-blue"><img src="img/home-icon.png" alt=""></a>
-            </li>
-            <li class="nav__item">
-              <a href="#2" class="nav__link c-yellow scrolly"><img src="img/about-icon.png" alt=""></a>
-            </li>
-            <!-- <li class="nav__item">
-              <a href="#3" class="nav__link c-red"><img src="img/projects-icon.png" alt=""></a>
-            </li>
-            <li class="nav__item">
-              <a href="#4" class="nav__link c-green"><img src="img/contact-icon.png" alt=""></a>
-            </li> -->
-          </ul>
-        </nav>
+          <!-- Name -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 hero-animate" style="--delay: 0.1s">
+            <span class="text-white">Pangeran</span><br/>
+            <span class="text-gradient-animated">Christian</span><br/>
+            <span class="text-white">Pasaribu</span>
+          </h1>
 
-        <section class="panel b-blue" id="1">
-          <article class="panel__wrapper">
-            <div class="panel__content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <div class="home-content">
-                      <div class="home-heading">
-                        <h1 style="font-size:28px"><em>Hi!</em> welcome to my profile page.</h1>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="home-box-content">
-                            <div class="left-text">
-                              <h4>Pangeran <em>Christian</em></h4>
-                              <p>I am interested in software engineering. Want to learn something new. Can adapt to groups and work together.</p>
-                              <div class="primary-button">
-                                <a href="#2">More about me</a>
-                              </div>
-                            </div>
-                            <div class="right-image">
-                              <img src="img/right-home-image2.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <!-- Title -->
+          <div class="mb-6 hero-animate" style="--delay: 0.2s">
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/25 text-blue-300 text-sm font-mono">Odoo ERP Developer</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/25 text-cyan-300 text-sm font-mono">Software Engineer</span>
+              <span class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/25 text-purple-300 text-sm font-mono">IT Programmer</span>
+            </div>
+          </div>
+
+          <!-- Headline -->
+          <p class="text-xl sm:text-2xl font-semibold text-gray-200 mb-4 leading-snug hero-animate" style="--delay: 0.3s">
+            Turning Complex Business Processes<br class="hidden sm:block"/>
+            Into <span class="text-gradient-animated">Elegant ERP Solutions</span>
+          </p>
+
+          <!-- Description -->
+          <p class="text-gray-400 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8 hero-animate" style="--delay: 0.4s">
+            7+ years building enterprise software with deep expertise in Odoo ERP (v10–v19), Python, PostgreSQL, and system integration. Passionate about optimizing business workflows and delivering scalable solutions.
+          </p>
+
+          <!-- Location -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 text-gray-400 text-sm mb-8 hero-animate" style="--delay: 0.5s">
+            <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i>
+            <span>Bekasi, West Java, Indonesia</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap gap-3 justify-center lg:justify-start hero-animate" style="--delay: 0.6s">
+            <a href="assets/cv-pangeran-pasaribu.pdf" download
+               class="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 group">
+              <i data-lucide="download" class="w-5 h-5 group-hover:animate-bounce"></i>
+              Download CV
+            </a>
+            <a href="mailto:pangeran.ian@gmail.com"
+               class="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+              <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i>
+              Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/pangeranpas" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+              <i data-lucide="linkedin" class="w-5 h-5 text-blue-400"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Stats card -->
+        <div class="flex flex-col gap-5 hero-animate" style="--delay: 0.4s">
+          <!-- Profile card -->
+          <div class="glass-card rounded-2xl p-6 animate-float">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-2xl font-bold shadow-lg shadow-blue-500/30">
+                PCP
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">Pangeran Pasaribu</h3>
+                <p class="text-sm text-gray-400">Senior Odoo Developer</p>
+                <div class="flex items-center gap-1 mt-1">
+                  <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                  <span class="text-xs text-green-400">Open to work</span>
                 </div>
               </div>
             </div>
-          </article>
-        </section>
-        <section class="panel b-yellow" id="2">
-          <article class="panel__wrapper">
-            <div class="panel__content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <div class="about-content">
-                      <div class="heading">
-                        <h4>About me</h4>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="about-box-content">
-                            <img src="img/project-item-07.jpg" alt="">
-                          </div>
-                        </div>
-                        <div class="col-md-7 col-md-offset-5">
-                          <div class="about-box-text">
-                            <h4>Summary</h4>
-                            <p>I have more than 2 year experience in IT Field as Odoo Programmer (Current Position).
-                              I am able to communicate in Indonesian (native) and English language (spoken and written).
-                              I am also familiar to gather user Develop and manage the work breakdown structure (WBS) of information technology projects, creating project reports, project documentation.
-                              I have knowledge in Odoo ERP, PHP, Python, XML, HTML, Java, Postgres SQL, Windows 10 OS, Windows 11 OS, Linux, Ms. Office apps, PG Admin, Dbeaver, Visual Code Studio, and Android Studio.
-                              I'm a fast learner who adapt quickly to change, eager to learn new things in Information and Technology, and discipline.</p>
-                            <div class="primary-button">
-                              <a href="#3">Discover More</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Mini stats -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <div class="text-2xl font-bold text-gradient-animated">7+</div>
+                <div class="text-xs text-gray-400 mt-0.5">Years Exp.</div>
+              </div>
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <div class="text-2xl font-bold text-gradient-animated">50+</div>
+                <div class="text-xs text-gray-400 mt-0.5">Custom Modules</div>
+              </div>
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <div class="text-2xl font-bold text-gradient-animated">200+</div>
+                <div class="text-xs text-gray-400 mt-0.5">Users Trained</div>
+              </div>
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <div class="text-2xl font-bold text-gradient-animated">2M+</div>
+                <div class="text-xs text-gray-400 mt-0.5">Customers Served</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech stack mini -->
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-mono">Core Stack</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge">🐍 Python</span>
+              <span class="tech-badge">🟣 Odoo</span>
+              <span class="tech-badge">🐘 PostgreSQL</span>
+              <span class="tech-badge">🟨 JavaScript</span>
+              <span class="tech-badge">🐘 PHP</span>
+              <span class="tech-badge">🔵 Golang</span>
+              <span class="tech-badge">📊 Tableau</span>
+              <span class="tech-badge">🔗 REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs animate-bounce">
+      <span>Scroll to explore</span>
+      <i data-lucide="chevrons-down" class="w-5 h-5"></i>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section class="py-16 bg-navy-900 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div class="achievement-card text-center p-5 rounded-2xl reveal">
+          <div class="text-3xl md:text-4xl font-bold text-gradient-animated mb-1">7+</div>
+          <div class="text-gray-400 text-sm">Years Experience</div>
+        </div>
+        <div class="achievement-card text-center p-5 rounded-2xl reveal">
+          <div class="text-3xl md:text-4xl font-bold text-gradient-animated mb-1">50+</div>
+          <div class="text-gray-400 text-sm">Custom Modules</div>
+        </div>
+        <div class="achievement-card text-center p-5 rounded-2xl reveal">
+          <div class="text-3xl md:text-4xl font-bold text-gradient-animated mb-1">200+</div>
+          <div class="text-gray-400 text-sm">Users Trained</div>
+        </div>
+        <div class="achievement-card text-center p-5 rounded-2xl reveal">
+          <div class="text-3xl md:text-4xl font-bold text-gradient-animated mb-1">2M+</div>
+          <div class="text-gray-400 text-sm">Customers Supported</div>
+        </div>
+        <div class="achievement-card text-center p-5 rounded-2xl col-span-2 md:col-span-1 reveal">
+          <div class="text-3xl md:text-4xl font-bold text-gradient-animated mb-1">1000x</div>
+          <div class="text-gray-400 text-sm">Performance Gains</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ME ===================== -->
+  <section id="about" class="py-24 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+        <!-- Left bio -->
+        <div class="lg:col-span-3 space-y-6 reveal">
+          <p class="text-gray-300 text-lg leading-relaxed">
+            I'm <strong class="text-white">Pangeran Christian Pardamean Pasaribu</strong>, a dedicated IT Programmer, Odoo ERP Developer, and Software Engineer based in <strong class="text-cyan-400">Bekasi, Indonesia</strong>.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            With over 7 years of hands-on experience, I specialize in <strong class="text-blue-400">Odoo ERP customization and implementation</strong> across versions 10 through 19, Python backend development, and enterprise application design. I have a proven track record of delivering scalable, production-ready solutions for businesses ranging from regional utilities to national service providers.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            My professional journey spans roles at <strong class="text-white">PT Infomedia Nusantara</strong>, <strong class="text-white">PT Cendana Teknika Utama</strong>, and <strong class="text-white">PT Global Service Indonesia</strong>, where I led ERP implementations, built custom modules, integrated external APIs, optimized database performance, and trained end users.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            I'm passionate about bridging the gap between complex business requirements and clean technical solutions — writing maintainable code, documenting systems thoroughly, and continuously improving performance.
+          </p>
+
+          <!-- Key skills highlight -->
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              Odoo ERP v10–v19
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              Python & OWL Framework
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              PostgreSQL Optimization
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              REST API Integration
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              Enterprise Arch. Design
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              Business Process Automation
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Quick facts -->
+        <div class="lg:col-span-2 reveal">
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <h3 class="text-sm text-gray-500 uppercase tracking-wider font-mono mb-4">Quick Facts</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="briefcase" class="w-4 h-4 text-blue-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Current Position</p>
+                  <p class="text-sm text-white font-medium">IT Programmer at PT Infomedia</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="graduation-cap" class="w-4 h-4 text-cyan-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Education</p>
+                  <p class="text-sm text-white font-medium">S1 Sistem Informasi</p>
+                  <p class="text-xs text-gray-400">Gunadarma University</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-purple-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Location</p>
+                  <p class="text-sm text-white font-medium">Bekasi, West Java</p>
+                  <p class="text-xs text-gray-400">Indonesia</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-green-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="languages" class="w-4 h-4 text-green-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Languages</p>
+                  <p class="text-sm text-white font-medium">Indonesian (Native)</p>
+                  <p class="text-xs text-gray-400">English (Professional)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-orange-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4 text-orange-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Email</p>
+                  <a href="mailto:pangeran.ian@gmail.com" class="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium">pangeran.ian@gmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Phone</p>
+                  <a href="tel:+6285155270407" class="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium">+62 851-5527-0407</a>
                 </div>
               </div>
             </div>
-          </article>
-        </section>
-        <!-- <section class="panel b-red" id="3">
-          <article class="panel__wrapper">
-            <div class="panel__content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <div class="projects-content">
-                      <div class="heading">
-                        <h4>Recent Projects</h4>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="owl-carousel owl-theme projects-container">
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Best Design</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Creative Pen</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Nice Capture</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>This Moment</h4>
-                                  <p>Lorem ipsum dolor sit amet, adipis scing elit etiam sit amet ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Artwork</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Item Sixth</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="project-item">
-                                <a href="img/project-item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg" alt=""></a>
-                                <div class="text-content">
-                                  <h4>Last Item</h4>
-                                  <p>Lorem ipsum dolor, adipis scing elit etiam ante vehicula, aliquam mauris in, luctus neque.</p>
-                                  <div class="primary-button">
-                                    <a href="#">Discover More</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK EXPERIENCE ===================== -->
+  <section id="experience" class="py-24 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Career Journey</span>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line (desktop) -->
+        <div class="hidden lg:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/50 via-cyan-500/30 to-transparent"></div>
+
+        <!-- Timeline items -->
+        <div class="space-y-12">
+
+          <!-- Job 1: PT Infomedia -->
+          <div class="reveal timeline-item lg:grid lg:grid-cols-2 lg:gap-16">
+            <div class="lg:text-right lg:pr-12">
+              <div class="glass-card rounded-2xl p-6">
+                <div class="flex lg:flex-row-reverse items-start gap-4 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-xl shadow-lg flex-shrink-0">
+                    🏢
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white">IT Programmer</h3>
+                    <p class="text-blue-400 font-semibold">PT Infomedia Nusantara</p>
+                    <div class="flex flex-wrap gap-2 mt-1 lg:justify-end">
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="calendar" class="w-3 h-3"></i>
+                        2022 – Present
+                      </span>
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="map-pin" class="w-3 h-3"></i>
+                        Jakarta, Indonesia
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </article>
-        </section>
-        <section class="panel b-green" id="4">
-          <article class="panel__wrapper">
-            <div class="panel__content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <div class="contact-content">
-                      <div class="heading">
-                        <h4>Contact us</h4>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-8">
-                          <div class="contat-form">
-                            <form id="contact" action="" method="post">
-                              <fieldset>
-                                <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
-                              </fieldset>
-                              <fieldset>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
-                              </fieldset>
-                              <fieldset>
-                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
-                              </fieldset>
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="btn">Send Message</button>
-                              </fieldset>
-                            </form>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="more-info">
-                            <p>Lorem ipsum dolor , consectetur adipiscing elit. Nunc purus ligula, ullamcorper id velit id, vestibulum auc sapien. Sed quis mauris eget sem imperdiet rhoncus.<br><br>
-                            <em>3344 Etiam mauris erat,
-								<br>Vestibulum eu augue nec, 10550</em></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="footer">
-                      <p>Copyright &copy; 2017 Your Company
-                      | Designed by TemplateMo</p>
-                    </div>
-                  </div>
+                <ul class="space-y-2 text-sm text-gray-400">
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Developed and maintained Odoo ERP modules for telecommunications and service management</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Supported 2M+ customers through optimized enterprise systems and CRM integration</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Performed PostgreSQL query optimization achieving significant performance improvements</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Developed REST API integrations connecting Odoo with third-party platforms</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Built Tableau dashboards for business intelligence and data-driven decision making</span></li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 mt-4 lg:justify-end">
+                  <span class="exp-tag">Odoo ERP</span>
+                  <span class="exp-tag">Python</span>
+                  <span class="exp-tag">PostgreSQL</span>
+                  <span class="exp-tag">Tableau</span>
+                  <span class="exp-tag">REST API</span>
                 </div>
               </div>
             </div>
-          </article>
-        </section> -->
+            <div class="hidden lg:flex items-center justify-start pl-12">
+              <div class="timeline-dot"></div>
+            </div>
+          </div>
 
+          <!-- Job 2: Cendana Teknika Utama -->
+          <div class="reveal timeline-item lg:grid lg:grid-cols-2 lg:gap-16">
+            <div class="hidden lg:flex items-center justify-end pr-12">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="lg:pl-12">
+              <div class="glass-card rounded-2xl p-6">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-xl shadow-lg flex-shrink-0">
+                    💻
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white">Odoo ERP Developer</h3>
+                    <p class="text-cyan-400 font-semibold">PT Cendana Teknika Utama</p>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="calendar" class="w-3 h-3"></i>
+                        2019 – 2022
+                      </span>
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="map-pin" class="w-3 h-3"></i>
+                        Jakarta, Indonesia
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-400">
+                  <li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Led end-to-end Odoo ERP implementation for PDAM Tirta Raharja Bandung (water utility company)</span></li>
+                  <li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Developed 50+ custom Odoo modules covering billing, inventory, HR, and operations</span></li>
+                  <li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Conducted comprehensive user training for 200+ end users across multiple departments</span></li>
+                  <li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Customized Odoo views, workflows, reports, and business logic per client requirements</span></li>
+                  <li class="flex items-start gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-cyan-400 flex-shrink-0 mt-0.5"></i><span>Troubleshot and resolved complex ERP integration issues post-deployment</span></li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  <span class="exp-tag">Odoo 13–16</span>
+                  <span class="exp-tag">Python</span>
+                  <span class="exp-tag">XML/QWeb</span>
+                  <span class="exp-tag">PostgreSQL</span>
+                  <span class="exp-tag">ERP Implementation</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+          <!-- Job 3: PT Global Service Indonesia -->
+          <div class="reveal timeline-item lg:grid lg:grid-cols-2 lg:gap-16">
+            <div class="lg:text-right lg:pr-12">
+              <div class="glass-card rounded-2xl p-6">
+                <div class="flex lg:flex-row-reverse items-start gap-4 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-xl shadow-lg flex-shrink-0">
+                    🌐
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white">Software Engineer</h3>
+                    <p class="text-purple-400 font-semibold">PT Global Service Indonesia</p>
+                    <div class="flex flex-wrap gap-2 mt-1 lg:justify-end">
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="calendar" class="w-3 h-3"></i>
+                        2017 – 2019
+                      </span>
+                      <span class="text-xs text-gray-400 flex items-center gap-1">
+                        <i data-lucide="map-pin" class="w-3 h-3"></i>
+                        Indonesia
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-400">
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-purple-400 flex-shrink-0 mt-0.5"></i><span>Developed enterprise information systems and web applications for clients</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-purple-400 flex-shrink-0 mt-0.5"></i><span>Built full-stack applications using PHP, JavaScript, and relational databases</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-purple-400 flex-shrink-0 mt-0.5"></i><span>Began foundational work with Odoo ERP customization and configuration</span></li>
+                  <li class="flex items-start gap-2 lg:flex-row-reverse lg:text-right"><i data-lucide="chevron-right" class="w-3 h-3 text-purple-400 flex-shrink-0 mt-0.5"></i><span>Maintained and improved legacy systems, applying performance optimization techniques</span></li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 mt-4 lg:justify-end">
+                  <span class="exp-tag">PHP</span>
+                  <span class="exp-tag">JavaScript</span>
+                  <span class="exp-tag">MySQL</span>
+                  <span class="exp-tag">Odoo 10–12</span>
+                  <span class="exp-tag">Web Dev</span>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg:flex items-center justify-start pl-12">
+              <div class="timeline-dot"></div>
+            </div>
+          </div>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+  <!-- ===================== FEATURED PROJECTS ===================== -->
+  <section id="projects" class="py-24 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">Real-world enterprise solutions delivered with precision and scalability.</p>
+      </div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card rounded-2xl p-6 reveal group">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/30 border border-blue-500/20 flex items-center justify-center text-2xl">
+              💧
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-green-500/15 border border-green-500/20 text-green-400 text-xs font-medium">Completed</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Odoo ERP — PDAM Tirta Raharja Bandung</h3>
+          <p class="text-sm text-blue-400 font-mono mb-3">PT Cendana Teknika Utama</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            End-to-end Odoo ERP implementation for a regional water utility company (PDAM) in Bandung. Covered billing management, customer data, inventory, HR module, and financial reporting. Served thousands of end users across the organization.
+          </p>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="users" class="w-3.5 h-3.5 text-cyan-400"></i>
+              200+ users trained across departments
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="package" class="w-3.5 h-3.5 text-cyan-400"></i>
+              Custom modules: billing, inventory, HR, reporting
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i>
+              Full implementation lifecycle — analysis to go-live
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="proj-tag">Odoo 14</span>
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">QWeb Reports</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card rounded-2xl p-6 reveal group">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/30 border border-cyan-500/20 flex items-center justify-center text-2xl">
+              🏗️
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-blue-500/15 border border-blue-500/20 text-blue-400 text-xs font-medium">Enterprise</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Enterprise Information System</h3>
+          <p class="text-sm text-cyan-400 font-mono mb-3">PT Global Service Indonesia</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Designed and developed enterprise information systems for multiple clients. Built custom web applications, database structures, and business logic to automate and digitize manual business processes.
+          </p>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400"></i>
+              Multi-client enterprise deployment
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="database" class="w-3.5 h-3.5 text-blue-400"></i>
+              Custom DB schema and backend APIs
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="settings" class="w-3.5 h-3.5 text-blue-400"></i>
+              Business process automation and reporting
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="proj-tag">PHP</span>
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">REST API</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card rounded-2xl p-6 reveal group">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/30 border border-purple-500/20 flex items-center justify-center text-2xl">
+              🔧
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-purple-500/15 border border-purple-500/20 text-purple-400 text-xs font-medium">Ongoing</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Odoo ERP Customization & Module Dev</h3>
+          <p class="text-sm text-purple-400 font-mono mb-3">PT Infomedia Nusantara</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Continuous development and customization of Odoo ERP modules tailored to the telecom industry. Includes custom workflows, automated actions, QWeb report customization, and OWL-based frontend components.
+          </p>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="code-2" class="w-3.5 h-3.5 text-purple-400"></i>
+              50+ custom modules developed
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-purple-400"></i>
+              Multi-version migration (v10 → v19)
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-purple-400"></i>
+              Troubleshooting and performance tuning
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="proj-tag">Odoo 16–19</span>
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">OWL</span>
+            <span class="proj-tag">QWeb</span>
+            <span class="proj-tag">XML</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card rounded-2xl p-6 reveal group">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-orange-600/30 border border-orange-500/20 flex items-center justify-center text-2xl">
+              📊
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-orange-500/15 border border-orange-500/20 text-orange-400 text-xs font-medium">Analytics</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">Tableau Business Intelligence Dashboard</h3>
+          <p class="text-sm text-orange-400 font-mono mb-3">PT Infomedia Nusantara</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Designed and developed interactive Tableau dashboards for executive reporting and operational KPI monitoring. Connected live data from PostgreSQL and Odoo to provide real-time business insights for decision makers.
+          </p>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-orange-400"></i>
+              Interactive executive KPI dashboards
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="link" class="w-3.5 h-3.5 text-orange-400"></i>
+              Live PostgreSQL & Odoo data connections
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <i data-lucide="eye" class="w-3.5 h-3.5 text-orange-400"></i>
+              Multi-dimensional data visualization
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="proj-tag">Tableau</span>
+            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">Data Visualization</span>
+            <span class="proj-tag">BI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECHNICAL SKILLS ===================== -->
+  <section id="skills" class="py-24 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Python -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/20 flex items-center justify-center text-xl">🐍</div>
+            <div>
+              <h3 class="font-semibold text-white">Python</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:95%"></div></div>
+                <span class="text-xs text-gray-400 w-8">95%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">ORM, decorators, async, pandas, scripting, Odoo models</p>
+        </div>
+
+        <!-- Odoo ERP -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center text-xl">🟣</div>
+            <div>
+              <h3 class="font-semibold text-white">Odoo ERP</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:95%"></div></div>
+                <span class="text-xs text-gray-400 w-8">95%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">v10–v19, custom modules, QWeb, OWL, XML, workflows</p>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center text-xl">🐘</div>
+            <div>
+              <h3 class="font-semibold text-white">PostgreSQL</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:88%"></div></div>
+                <span class="text-xs text-gray-400 w-8">88%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">Query optimization, indexing, schema design, stored procedures</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/20 flex items-center justify-center text-xl">🟨</div>
+            <div>
+              <h3 class="font-semibold text-white">JavaScript</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:80%"></div></div>
+                <span class="text-xs text-gray-400 w-8">80%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">ES6+, DOM manipulation, OWL framework, frontend integration</p>
+        </div>
+
+        <!-- PHP -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center text-xl">🐘</div>
+            <div>
+              <h3 class="font-semibold text-white">PHP</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:75%"></div></div>
+                <span class="text-xs text-gray-400 w-8">75%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">Laravel, MVC pattern, RESTful APIs, web applications</p>
+        </div>
+
+        <!-- Golang -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center text-xl">🔵</div>
+            <div>
+              <h3 class="font-semibold text-white">Golang</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:70%"></div></div>
+                <span class="text-xs text-gray-400 w-8">70%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">Microservices, REST APIs, concurrent processing</p>
+        </div>
+
+        <!-- Tableau -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/20 flex items-center justify-center text-xl">📊</div>
+            <div>
+              <h3 class="font-semibold text-white">Tableau</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:82%"></div></div>
+                <span class="text-xs text-gray-400 w-8">82%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">Dashboards, data stories, calculated fields, live connections</p>
+        </div>
+
+        <!-- Git -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-red-500/15 border border-red-500/20 flex items-center justify-center text-xl">🔀</div>
+            <div>
+              <h3 class="font-semibold text-white">Git & DevOps</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:85%"></div></div>
+                <span class="text-xs text-gray-400 w-8">85%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">Git, GitHub, GitLab, branching strategies, CI/CD</p>
+        </div>
+
+        <!-- REST API -->
+        <div class="skill-card glass-card rounded-2xl p-6 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-green-500/15 border border-green-500/20 flex items-center justify-center text-xl">🔗</div>
+            <div>
+              <h3 class="font-semibold text-white">REST API</h3>
+              <div class="flex items-center gap-2">
+                <div class="skill-bar flex-1"><div class="skill-fill" style="width:90%"></div></div>
+                <span class="text-xs text-gray-400 w-8">90%</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500">API design, integration, JSON-RPC, OAuth, webhooks</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ODOO EXPERTISE ===================== -->
+  <section id="odoo" class="py-24 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Deep Specialization</span>
+        <h2 class="section-title">Odoo ERP Expertise</h2>
+        <div class="section-line"></div>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-4">
+          Extensive hands-on experience across the entire Odoo version history — from legacy systems to the latest releases.
+        </p>
+      </div>
+
+      <!-- Version Timeline -->
+      <div class="mb-16 reveal">
+        <h3 class="text-center text-sm text-gray-500 uppercase tracking-wider font-mono mb-8">Odoo Version Coverage</h3>
+        <div class="odoo-version-grid">
+          <div class="version-card version-legacy group">
+            <div class="version-num">10</div>
+            <div class="version-label">Legacy</div>
+            <div class="version-tooltip">First Odoo version — foundational ERP architecture</div>
+          </div>
+          <div class="version-card version-legacy group">
+            <div class="version-num">11</div>
+            <div class="version-label">Legacy</div>
+            <div class="version-tooltip">OWL framework introduction</div>
+          </div>
+          <div class="version-card version-stable group">
+            <div class="version-num">12</div>
+            <div class="version-label">Stable</div>
+            <div class="version-tooltip">Enhanced POS and accounting</div>
+          </div>
+          <div class="version-card version-stable group">
+            <div class="version-num">13</div>
+            <div class="version-label">Stable</div>
+            <div class="version-tooltip">OWL rewrite, new frontend</div>
+          </div>
+          <div class="version-card version-primary group">
+            <div class="version-num">14</div>
+            <div class="version-label">Primary</div>
+            <div class="version-tooltip">PDAM Bandung implementation</div>
+          </div>
+          <div class="version-card version-primary group">
+            <div class="version-num">15</div>
+            <div class="version-label">Primary</div>
+            <div class="version-tooltip">Spreadsheet, reporting overhaul</div>
+          </div>
+          <div class="version-card version-primary group">
+            <div class="version-num">16</div>
+            <div class="version-label">Primary</div>
+            <div class="version-tooltip">New backend UI, improved OWL</div>
+          </div>
+          <div class="version-card version-current group">
+            <div class="version-num">17</div>
+            <div class="version-label">Current</div>
+            <div class="version-tooltip">Studio, new website builder</div>
+          </div>
+          <div class="version-card version-current group">
+            <div class="version-num">18</div>
+            <div class="version-label">Current</div>
+            <div class="version-tooltip">AI features, latest CE/EE</div>
+          </div>
+          <div class="version-card version-latest group">
+            <div class="version-num">19</div>
+            <div class="version-label">Latest</div>
+            <div class="version-tooltip">Cutting-edge Odoo 19 features</div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="w-3 h-3 rounded bg-gray-600"></div> Legacy (v10–v11)
+          </div>
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="w-3 h-3 rounded bg-blue-700"></div> Stable (v12–v13)
+          </div>
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="w-3 h-3 rounded bg-blue-500"></div> Primary (v14–v16)
+          </div>
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="w-3 h-3 rounded bg-cyan-500"></div> Current (v17–v18)
+          </div>
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="w-3 h-3 rounded bg-gradient-to-r from-cyan-400 to-blue-400"></div> Latest (v19)
+          </div>
+        </div>
+      </div>
+
+      <!-- Expertise Areas -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Module Development</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Building custom Odoo modules from scratch — models, views, controllers, wizards, security, and reports using Python ORM and XML/QWeb.</p>
+        </div>
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="settings-2" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">ERP Customization</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Adapting core Odoo functionality to match specific business requirements through inheritance, computed fields, automated actions, and custom business logic.</p>
+        </div>
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/20 to-green-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="rocket" class="w-5 h-5 text-green-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Implementation</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Full ERP deployment lifecycle: requirements analysis, gap analysis, configuration, data migration, UAT, training, go-live, and post-launch support.</p>
+        </div>
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="bug" class="w-5 h-5 text-red-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Troubleshooting</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Diagnosing and resolving complex ERP bugs, performance bottlenecks, integration failures, and upgrade issues across multiple Odoo versions.</p>
+        </div>
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500/20 to-yellow-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap" class="w-5 h-5 text-yellow-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">Performance Optimization</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">PostgreSQL query tuning, ORM optimization, caching strategies, and architectural improvements achieving up to 1000x performance gains.</p>
+        </div>
+
+        <div class="odoo-expertise-card glass-card rounded-2xl p-5 reveal group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="link-2" class="w-5 h-5 text-purple-400"></i>
+          </div>
+          <h3 class="font-semibold text-white mb-2">System Integration</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Connecting Odoo with external systems via REST API, JSON-RPC, and XML-RPC — including payment gateways, logistics, HR, and CRM platforms.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="py-24 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+        <!-- Gunadarma -->
+        <div class="glass-card rounded-2xl p-6 reveal group hover:border-blue-500/30 transition-colors border border-transparent">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-700/30 border border-blue-500/20 flex items-center justify-center text-2xl flex-shrink-0">
+              🎓
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-lg">Universitas Gunadarma</h3>
+              <p class="text-blue-400 font-medium">S1 — Sistem Informasi (Information Systems)</p>
+              <div class="flex items-center gap-2 mt-1 text-xs text-gray-400">
+                <i data-lucide="calendar" class="w-3 h-3"></i>
+                <span>2013 – 2017</span>
+                <span class="ml-2 px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/20 text-green-400">Graduated</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Bachelor's degree in Information Systems. Studied software engineering, database management, system analysis and design, enterprise resource planning, and IT project management.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="edu-tag">Software Engineering</span>
+            <span class="edu-tag">Database Systems</span>
+            <span class="edu-tag">System Analysis</span>
+            <span class="edu-tag">ERP Concepts</span>
+          </div>
+        </div>
+
+        <!-- UPN Veteran Jakarta -->
+        <div class="glass-card rounded-2xl p-6 reveal group hover:border-cyan-500/30 transition-colors border border-transparent">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-cyan-700/30 border border-cyan-500/20 flex items-center justify-center text-2xl flex-shrink-0">
+              🏛️
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-lg">UPN Veteran Jakarta</h3>
+              <p class="text-cyan-400 font-medium">D3 — Manajemen Informatika</p>
+              <div class="flex items-center gap-2 mt-1 text-xs text-gray-400">
+                <i data-lucide="calendar" class="w-3 h-3"></i>
+                <span>2010 – 2013</span>
+                <span class="ml-2 px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/20 text-green-400">Graduated</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Diploma in Informatics Management. Built foundational knowledge in computer science, programming fundamentals, networking, and information management.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="edu-tag">Programming Fundamentals</span>
+            <span class="edu-tag">Networking</span>
+            <span class="edu-tag">Information Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section id="certifications" class="py-24 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Microsoft Certifications -->
+      <div class="mb-12 reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/15 flex items-center justify-center">
+            <span class="text-lg">🪟</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">Microsoft Certifications</h3>
+          <div class="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0">🪟</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Microsoft Azure Fundamentals</h4>
+                <p class="text-xs text-blue-400 mt-0.5">AZ-900</p>
+                <p class="text-xs text-gray-500 mt-1">Microsoft</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0">🪟</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Microsoft 365 Fundamentals</h4>
+                <p class="text-xs text-blue-400 mt-0.5">MS-900</p>
+                <p class="text-xs text-gray-500 mt-1">Microsoft</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0">🪟</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Azure AI Fundamentals</h4>
+                <p class="text-xs text-blue-400 mt-0.5">AI-900</p>
+                <p class="text-xs text-gray-500 mt-1">Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Udemy Certifications -->
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/15 flex items-center justify-center">
+            <span class="text-lg">🎯</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">Udemy Courses & Certifications</h3>
+          <div class="flex-1 h-px bg-gradient-to-r from-purple-500/30 to-transparent"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">🐍</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Complete Python Bootcamp</h4>
+                <p class="text-xs text-gray-400 mt-1">Python 3 from beginner to advanced</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">🟣</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Odoo 16 Development</h4>
+                <p class="text-xs text-gray-400 mt-1">Module development & customization</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">🐘</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">PostgreSQL for Everybody</h4>
+                <p class="text-xs text-gray-400 mt-1">Database design & advanced queries</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">📊</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Tableau 2024 A-Z</h4>
+                <p class="text-xs text-gray-400 mt-1">Hands-on Tableau training for data science</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">🔵</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">Go: The Complete Developer's Guide</h4>
+                <p class="text-xs text-gray-400 mt-1">Golang programming fundamentals to advanced</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card glass-card rounded-xl p-4 reveal">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0">🔗</div>
+              <div>
+                <h4 class="font-medium text-white text-sm">REST API Design, Development & Management</h4>
+                <p class="text-xs text-gray-400 mt-1">Complete REST API guide</p>
+                <p class="text-xs text-gray-500 mt-0.5">Udemy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="py-24 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-16 reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-line"></div>
+        <p class="text-gray-400 max-w-xl mx-auto mt-4">
+          Available for full-time roles, consulting, and freelance projects. Let's discuss how I can help your team.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+        <div class="space-y-5 reveal">
+          <a href="mailto:pangeran.ian@gmail.com" class="contact-link glass-card rounded-2xl p-5 flex items-center gap-4 group hover:border-blue-500/30 border border-transparent transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/25 group-hover:scale-110 transition-all">
+              <i data-lucide="mail" class="w-5 h-5 text-blue-400"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 mb-0.5">Email</p>
+              <p class="text-white font-medium group-hover:text-blue-400 transition-colors">pangeran.ian@gmail.com</p>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-600 group-hover:text-blue-400 ml-auto transition-all group-hover:translate-x-1"></i>
+          </a>
+
+          <a href="tel:+6285155270407" class="contact-link glass-card rounded-2xl p-5 flex items-center gap-4 group hover:border-green-500/30 border border-transparent transition-all">
+            <div class="w-12 h-12 rounded-xl bg-green-500/15 border border-green-500/20 flex items-center justify-center group-hover:bg-green-500/25 group-hover:scale-110 transition-all">
+              <i data-lucide="phone" class="w-5 h-5 text-green-400"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 mb-0.5">Phone / WhatsApp</p>
+              <p class="text-white font-medium group-hover:text-green-400 transition-colors">+62 851-5527-0407</p>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-600 group-hover:text-green-400 ml-auto transition-all group-hover:translate-x-1"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/pangeranpas" target="_blank" rel="noopener noreferrer" class="contact-link glass-card rounded-2xl p-5 flex items-center gap-4 group hover:border-blue-500/30 border border-transparent transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-700/15 border border-blue-700/20 flex items-center justify-center group-hover:bg-blue-700/25 group-hover:scale-110 transition-all">
+              <i data-lucide="linkedin" class="w-5 h-5 text-blue-400"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 mb-0.5">LinkedIn</p>
+              <p class="text-white font-medium group-hover:text-blue-400 transition-colors">linkedin.com/in/pangeranpas</p>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-600 group-hover:text-blue-400 ml-auto transition-all group-hover:translate-x-1"></i>
+          </a>
+
+          <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center">
+              <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400"></i>
+            </div>
+            <div>
+              <p class="text-xs text-gray-500 mb-0.5">Location</p>
+              <p class="text-white font-medium">Bekasi, West Java, Indonesia</p>
+              <p class="text-xs text-gray-400">Open to remote & hybrid</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CTA card -->
+        <div class="reveal">
+          <div class="glass-card rounded-2xl p-8 h-full flex flex-col justify-between border border-blue-500/10">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-5 shadow-lg shadow-blue-500/30">
+                <i data-lucide="handshake" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Let's Build Something Great</h3>
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Whether you need an Odoo ERP implementation, custom module development, system integration, or performance optimization — I'm here to help deliver high-quality results on time.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-gray-300">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  7+ years Odoo ERP expertise
+                </li>
+                <li class="flex items-center gap-2 text-sm text-gray-300">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  Full-stack Python development
+                </li>
+                <li class="flex items-center gap-2 text-sm text-gray-300">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  Enterprise system integration
+                </li>
+                <li class="flex items-center gap-2 text-sm text-gray-300">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  Business process automation
+                </li>
+              </ul>
+            </div>
+            <div class="flex gap-3">
+              <a href="mailto:pangeran.ian@gmail.com"
+                 class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-[1.02]">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Send Email
+              </a>
+              <a href="assets/cv-pangeran-pasaribu.pdf" download
+                 class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-all duration-300 hover:scale-[1.02]">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                CV
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="py-8 bg-navy-950 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-xs font-mono">PCP</div>
+          <span class="text-gray-400 text-sm">Pangeran Christian Pardamean Pasaribu</span>
+        </div>
+        <p class="text-gray-600 text-sm text-center">
+          © 2024 All rights reserved · Odoo ERP Developer & Software Engineer
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:pangeran.ian@gmail.com" class="text-gray-500 hover:text-white transition-colors" aria-label="Email">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pangeranpas" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors" aria-label="LinkedIn">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/pangeranpas" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors" aria-label="GitHub">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-lg shadow-blue-500/30 opacity-0 translate-y-4 transition-all duration-300 hover:scale-110 hover:shadow-blue-500/50 z-40" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/portfolio.js"></script>
+</body>
 </html>
